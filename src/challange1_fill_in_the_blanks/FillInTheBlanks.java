@@ -12,6 +12,7 @@ public class FillInTheBlanks {
 
         //Ask the user to provide
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Lets create a story!");
         //1. Season of the year
         String seasonOfTheYear;
         System.out.println("What is your favorite season of the year?");
@@ -24,6 +25,8 @@ public class FillInTheBlanks {
         String adjective;
         System.out.println("OK, now tell me one adjective.");
         adjective = scanner.next();
+
+        scanner.close();
 
         //4. Store the inputs in variables
         // I did, in the lines above
