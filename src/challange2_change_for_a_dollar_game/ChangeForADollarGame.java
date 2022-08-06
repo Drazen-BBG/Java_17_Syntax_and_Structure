@@ -47,23 +47,27 @@ public class ChangeForADollarGame {
         double worthOfDimes = 0.1d * numberOfDimes;
         double worthOfQuarters = 0.25d * numberOfQuarters;
 
+        int dollar = 1;
+
         //3.Do the math
 
         double result = worthOfPennies + worthOfNickles + worthOfDimes + worthOfQuarters;
 
         //4.Inform the player
-        if (result == 1){
+        if (result == dollar){
             System.out.println("Yeah! That's exactly $1.00! You win!!!");
-        } else if (result > 1) {
-            double overOneDollar = result - 1;
+        } else if (result > dollar) {
+            double overOneDollar = result - dollar;
             System.out.println("You lose!!!");
-            System.out.println("Your result is $" + result + " which is $" + overOneDollar + " more than you need");
-        } else if (result < 1) {
-            double underOneDollar = result - 1;
+            System.out.println("Your result is $" + String.format("%.2f", result) + " which is $" + String.format("%.2f", overOneDollar) + " more than you need");
+        } else if (result < dollar) {
+            double underOneDollar = dollar - result;
             System.out.println("You lose!!!");
-            System.out.println("Your result is $" + result + " which is $" + underOneDollar + " less than you need");
+            System.out.println("Your result is $" + String.format("%.2f", result) + " which is $" + String.format("%.2f", underOneDollar) + " less than you need");
         }else {
             System.out.println("Something went wrong!!!");
         }
     }
 }
+
+    //Added variable for dollar, fixed the rounding to two decimals, closed the scanner
