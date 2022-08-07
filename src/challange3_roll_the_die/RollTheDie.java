@@ -1,4 +1,4 @@
-package challange_roll_the_die;
+package challange3_roll_the_die;
 
 //Challenge Roll the Die
 //Travel the entire game board of 20 spaces withing 5 die rolls
