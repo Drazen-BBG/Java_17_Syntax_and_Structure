@@ -22,10 +22,13 @@ import java.util.Scanner;
 public class RollTheDie {
 
     public static void main(String[] args) {
+
         boolean playAgain = true;
+
         do {
             Scanner scanner = new Scanner(System.in);
             System.out.println("");
+            System.out.println("Welcome to the Roll the Die!");
             System.out.println("Let's play");
 
             System.out.println("Tell me how many spaces do you want your board to have?");
@@ -36,8 +39,6 @@ public class RollTheDie {
             int currentRoll = 0;
             Random random = new Random();
             int currentRandom = 0;
-
-
 
             for (int i = 0; i < maxRolls; i++) {
                 System.out.println("Press 0 to roll the die");
@@ -56,10 +57,10 @@ public class RollTheDie {
                         System.out.println("Roll #" + (i + 1) + ": You've rolled a " + currentRandom + ". You are now on space " + currentRoll + " and you made it.");
                         i = (maxRolls - 1);
                     }
+
                 } else {
                     System.out.println("Invalid entry, try again.");
                     i--;
-
                 }
 
                 if (i == (maxRolls - 1)) {
@@ -71,7 +72,9 @@ public class RollTheDie {
                         System.out.println("You LOSE!!! You were short " + (boardLength - currentRoll) + " spaces to reach the last space.");
                     }
                 }
-            }
+
+            } //End of for loop
+
             System.out.println("");
             System.out.println("Do you want to play again?");
             System.out.println("If YES press 0, if NO press 1");
@@ -86,7 +89,6 @@ public class RollTheDie {
 
         }while (playAgain);
     }
-
 
 }
 
